@@ -12,7 +12,8 @@ cd working
 
 # Transform
 
-# sed -i -e "1 s/FROM.*/FROM ghcr.io\/golden-containers\/bullseye/; t" -e "1,// s//FROM ghcr.io\/golden-containers\/bullseye/" 17/bullseye/Dockerfile
+# sed -i -e "1 s/FROM.*/FROM ghcr.io\/golden-containers\/debian\:bullseye-slim/; t" -e "1,// s//FROM ghcr.io\/golden-containers\/debian\:bullseye-slim/" 17/bullseye-slim/Dockerfile
+# echo "LABEL $1" >> 17/bullseye-slim/Dockerfile
 
 # Build
 
@@ -20,4 +21,4 @@ cd working
 
 # Push
 
-# docker push ghcr.io/golden-containers/upstream-bullseye-slim:17
+# docker push ghcr.io/golden-containers/upstream-bullseye-slim -a
