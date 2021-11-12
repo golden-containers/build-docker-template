@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -xe
+set -Eeuxo pipefail
 rm -rf working
 mkdir working
 cd working
